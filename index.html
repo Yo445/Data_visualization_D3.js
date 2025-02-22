@@ -3,11 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data visualization</title>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <title>Data Visualization</title>
+    <script src="https://d3js.org/d3.v5.min.js" defer></script>
+    <script src="https://d3js.org/d3-scale.v5.min.js" defer></script>
     <script src="app.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f4f4f4;
+        }
+        .chart-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .bar {
+            fill: #720570;
+            transition: fill 0.3s, height 0.3s;
+        }
+        .bar:hover {
+            fill: #a637a3;
+        }
+        .axis-label {
+            font-size: 14px;
+            fill: #333;
+        }
+    </style>
 </head>
 <body>
-    <div></div>
+    <div class="chart-container">
+        <svg width="500" height="300"></svg>
+    </div>
 </body>
 </html>
